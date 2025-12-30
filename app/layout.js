@@ -6,6 +6,7 @@ import Nav from "./components/Nav";
 import Providers from "@/providers";
 import { Analytics } from "@vercel/analytics/next";
 import { PERSONAL_INFO } from "./constants/personalInfo";
+import { StructuredData } from "./components/StructuredData";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,8 +20,45 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: PERSONAL_INFO.name,
-  description: "Creator of the software solutions",
+  title: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.title}`,
+  description: `${PERSONAL_INFO.title} based in ${PERSONAL_INFO.location}. Specializing in full-stack development, AI integration, and automation. Building scalable web applications with Next.js, React, and modern technologies.`,
+  keywords: `${PERSONAL_INFO.name}, ${PERSONAL_INFO.title}, full-stack developer, AI integration, automation, Next.js, React, TypeScript, software developer, ${PERSONAL_INFO.location}, portfolio`,
+  authors: [{ name: PERSONAL_INFO.name }],
+  creator: PERSONAL_INFO.name,
+  publisher: PERSONAL_INFO.name,
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://yubrajkhatri.com.np',
+    siteName: `${PERSONAL_INFO.name} - Portfolio`,
+    title: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.title}`,
+    description: `${PERSONAL_INFO.title} specializing in full-stack development, AI integration, and automation.`,
+    images: [
+      {
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.title}`,
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.title}`,
+    description: `${PERSONAL_INFO.title} specializing in full-stack development, AI integration, and automation.`,
+    images: ['/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({ children }) {
@@ -28,8 +66,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/cyberhead.png" />
-        <title>{metadata.title}</title>
-        <meta name="description" content={metadata.description} />
+        <StructuredData />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

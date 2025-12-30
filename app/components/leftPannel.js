@@ -20,6 +20,7 @@ import {
 import { PERSONAL_INFO } from "../constants/personalInfo";
 
 import { SplineErrorFilter } from "./SplineErrorFilter"; // Import the improved filter
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export default function LeftPannel() {
   const { name, email, social } = PERSONAL_INFO;
@@ -43,18 +44,25 @@ export default function LeftPannel() {
           />
         </div>
 
-        {/* Name / handle / theme */}
-        <div className="mt-3 md:mt-4 flex flex-col items-center w-full max-w-xs">
-          <div className="flex items-center justify-between w-full px-4 py-3 rounded-2xl bg-gradient-to-r from-blue-50/80 via-purple-50/80 to-pink-50/80 dark:from-blue-900/20 dark:via-purple-900/20 dark:to-pink-900/20 border border-neutral-200/50 dark:border-neutral-700/50 backdrop-blur-sm">
-            <Link href="/" className="flex-1">
-              <h1 className="font-bold text-lg sm:text-xl md:text-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent text-center">
-                {name}
-              </h1>
-            </Link>
-            <div className="ml-3 p-1.5 rounded-full bg-white/70 dark:bg-black/30 border border-neutral-300/50 dark:border-neutral-600/50 shadow-sm hover:shadow-md transition-all duration-200">
-              <ThemeChanger />
-            </div>
+        {/* Name - below robot image */}
+        <div className="mb-3 md:mb-4">
+          <Link href="/">
+            <h1 className="font-bold text-lg sm:text-xl md:text-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent text-center">
+              {name}
+            </h1>
+          </Link>
+        </div>
+
+        {/* Theme and Language Switcher */}
+        <div className="mb-3 md:mb-4 flex items-center justify-center gap-2">
+          <div className="p-1.5 rounded-full bg-white/70 dark:bg-black/30 border border-neutral-300/50 dark:border-neutral-600/50 shadow-sm hover:shadow-md transition-all duration-200">
+            <ThemeChanger />
           </div>
+          <LanguageSwitcher />
+        </div>
+
+        {/* Main Content Container */}
+        <div className="mt-3 md:mt-4 flex flex-col items-center w-full max-w-xs">
 
           {/* Bio */}
           <div className="mt-2 -mb-1 md:mb-0">

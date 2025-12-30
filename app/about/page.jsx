@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { PERSONAL_INFO } from '../constants/personalInfo';
-import { FiMail, FiGithub, FiLinkedin, FiMapPin, FiDownload } from 'react-icons/fi';
+import { FiMail, FiGithub, FiLinkedin, FiMapPin, FiDownload, FiBriefcase, FiCalendar } from 'react-icons/fi';
 
 export default function AboutPage() {
   const { name, title, location, email, social } = PERSONAL_INFO;
@@ -32,19 +32,49 @@ export default function AboutPage() {
             <div className="text-neutral-700 dark:text-neutral-300 leading-relaxed space-y-4">
               <p>
                 I'm a passionate full-stack developer with a strong focus on AI integration and automation. 
-                With over 3 years of experience building scalable web applications, I specialize in creating 
-                innovative solutions that combine cutting-edge technology with practical business needs.
+                My journey in software development began in 2017, and over the past 7+ years, I've been dedicated to 
+                building scalable web applications that solve real-world problems. What started as curiosity 
+                about how websites work has evolved into a deep expertise in modern web technologies and AI-powered solutions.
               </p>
               <p>
-                My expertise lies in modern JavaScript frameworks like Next.js and React, and I'm particularly 
-                interested in leveraging AI to enhance user experiences and automate complex workflows. I believe 
-                in writing clean, maintainable code and following best practices to deliver production-ready solutions.
+                Originally from Nepal and now based in {location}, I bring a unique perspective to software 
+                development, combining technical excellence with creative problem-solving. My experience spans 
+                from building restaurant websites to developing complex AI-powered applications, always with 
+                a focus on user experience and performance.
               </p>
               <p>
                 Currently pursuing a Bachelor's degree in Computer Science at SUNY Brockport, I'm constantly 
-                learning and exploring new technologies. When I'm not coding, I enjoy working on side projects, 
-                contributing to open source, and staying up-to-date with the latest industry trends.
+                learning and exploring new technologies. I'm particularly passionate about leveraging AI to 
+                enhance user experiences and automate complex workflows. When I'm not coding, I enjoy working 
+                on side projects, contributing to open source, and staying up-to-date with the latest industry trends.
               </p>
+              <p>
+                I believe in writing clean, maintainable code and following best practices to deliver 
+                production-ready solutions. My goal is to create technology that not only works but also 
+                makes a positive impact on people's lives.
+              </p>
+            </div>
+          </section>
+
+          {/* Key Achievements */}
+          <section>
+            <h2 className="text-3xl font-bold mb-6 text-neutral-900 dark:text-neutral-100">Key Achievements</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950/30 dark:to-blue-900/20">
+                <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">7+</div>
+                <div className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-1">Years Experience</div>
+                <div className="text-sm text-neutral-600 dark:text-neutral-400">Building production-ready applications</div>
+              </div>
+              <div className="p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950/30 dark:to-purple-900/20">
+                <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">30+</div>
+                <div className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-1">Projects Completed</div>
+                <div className="text-sm text-neutral-600 dark:text-neutral-400">Across web, mobile, and AI domains</div>
+              </div>
+              <div className="p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-950/30 dark:to-pink-900/20">
+                <div className="text-4xl font-bold text-pink-600 dark:text-pink-400 mb-2">100%</div>
+                <div className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-1">Client Satisfaction</div>
+                <div className="text-sm text-neutral-600 dark:text-neutral-400">Delivering on time and exceeding expectations</div>
+              </div>
             </div>
           </section>
 
@@ -79,6 +109,162 @@ export default function AboutPage() {
                   Optimizing applications for speed, scalability, and user experience. Achieving high 
                   Lighthouse scores and ensuring fast load times.
                 </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Career Timeline */}
+          <section>
+            <h2 className="text-3xl font-bold mb-6 text-neutral-900 dark:text-neutral-100">Career Timeline</h2>
+            <div className="relative">
+              {/* Timeline line */}
+              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-purple-500 to-pink-500"></div>
+              
+              <div className="space-y-8">
+                {/* Timeline Item 1 - Current */}
+                <div className="relative pl-12">
+                  <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 border-4 border-white dark:border-neutral-950 flex items-center justify-center">
+                    <FiBriefcase className="text-white text-sm" />
+                  </div>
+                  <div className="bg-white dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-800 p-6 shadow-sm">
+                    <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 mb-2">
+                      <FiCalendar className="text-xs" />
+                      <span>2023 – Present</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">AI Integration Specialist</h3>
+                    <p className="text-neutral-700 dark:text-neutral-300 mb-3">
+                      Leading AI-powered solutions development with OpenAI API, LLM integration, and advanced prompt engineering. 
+                      Building intelligent automation systems and AI-enhanced web applications.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/20 text-blue-700 dark:text-blue-300 text-xs font-medium">
+                        OpenAI API
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950/20 text-purple-700 dark:text-purple-300 text-xs font-medium">
+                        LLM Integration
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-pink-50 dark:bg-pink-950/20 text-pink-700 dark:text-pink-300 text-xs font-medium">
+                        Prompt Engineering
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Timeline Item 2 */}
+                <div className="relative pl-12">
+                  <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-purple-600 border-4 border-white dark:border-neutral-950 flex items-center justify-center">
+                    <FiBriefcase className="text-white text-sm" />
+                  </div>
+                  <div className="bg-white dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-800 p-6 shadow-sm">
+                    <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 mb-2">
+                      <FiCalendar className="text-xs" />
+                      <span>2021 – 2023</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">Senior Full-Stack Developer</h3>
+                    <p className="text-neutral-700 dark:text-neutral-300 mb-3">
+                      Advanced to senior level, specializing in Next.js and React ecosystem. Led multiple production projects, 
+                      implemented complex state management, and optimized application performance.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/20 text-blue-700 dark:text-blue-300 text-xs font-medium">
+                        Next.js
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950/20 text-purple-700 dark:text-purple-300 text-xs font-medium">
+                        TypeScript
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-pink-50 dark:bg-pink-950/20 text-pink-700 dark:text-pink-300 text-xs font-medium">
+                        Performance Optimization
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Timeline Item 3 */}
+                <div className="relative pl-12">
+                  <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-gradient-to-br from-pink-500 to-pink-600 border-4 border-white dark:border-neutral-950 flex items-center justify-center">
+                    <FiBriefcase className="text-white text-sm" />
+                  </div>
+                  <div className="bg-white dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-800 p-6 shadow-sm">
+                    <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 mb-2">
+                      <FiCalendar className="text-xs" />
+                      <span>2019 – 2021</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">Full-Stack Developer</h3>
+                    <p className="text-neutral-700 dark:text-neutral-300 mb-3">
+                      Expanded expertise to full-stack development. Built RESTful APIs, worked with databases, 
+                      and developed mobile applications using React Native. Gained experience in cloud deployment and DevOps.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/20 text-blue-700 dark:text-blue-300 text-xs font-medium">
+                        Node.js
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950/20 text-purple-700 dark:text-purple-300 text-xs font-medium">
+                        React Native
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-pink-50 dark:bg-pink-950/20 text-pink-700 dark:text-pink-300 text-xs font-medium">
+                        REST APIs
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Timeline Item 4 */}
+                <div className="relative pl-12">
+                  <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-gradient-to-br from-green-500 to-green-600 border-4 border-white dark:border-neutral-950 flex items-center justify-center">
+                    <FiBriefcase className="text-white text-sm" />
+                  </div>
+                  <div className="bg-white dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-800 p-6 shadow-sm">
+                    <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 mb-2">
+                      <FiCalendar className="text-xs" />
+                      <span>2017 – 2019</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">Frontend Developer</h3>
+                    <p className="text-neutral-700 dark:text-neutral-300 mb-3">
+                      Started career focusing on frontend development. Mastered React, JavaScript, HTML/CSS, and responsive design. 
+                      Built multiple client websites and learned modern web development practices.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/20 text-blue-700 dark:text-blue-300 text-xs font-medium">
+                        React
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950/20 text-purple-700 dark:text-purple-300 text-xs font-medium">
+                        JavaScript
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-pink-50 dark:bg-pink-950/20 text-pink-700 dark:text-pink-300 text-xs font-medium">
+                        Responsive Design
+                      </span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Timeline Item 5 - Education */}
+                <div className="relative pl-12">
+                  <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-gradient-to-br from-indigo-500 to-indigo-600 border-4 border-white dark:border-neutral-950 flex items-center justify-center">
+                    <FiBriefcase className="text-white text-sm" />
+                  </div>
+                  <div className="bg-white dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-800 p-6 shadow-sm">
+                    <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 mb-2">
+                      <FiCalendar className="text-xs" />
+                      <span>2017 – Present</span>
+                    </div>
+                    <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">Computer Science Student</h3>
+                    <p className="text-neutral-700 dark:text-neutral-300 mb-3">
+                      Pursuing Bachelor's degree at SUNY Brockport. Continuously learning and applying new 
+                      technologies to real-world projects. Balancing academic studies with professional development.
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/20 text-blue-700 dark:text-blue-300 text-xs font-medium">
+                        Data Structures
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950/20 text-purple-700 dark:text-purple-300 text-xs font-medium">
+                        Algorithms
+                      </span>
+                      <span className="px-3 py-1 rounded-full bg-pink-50 dark:bg-pink-950/20 text-pink-700 dark:text-pink-300 text-xs font-medium">
+                        Software Engineering
+                      </span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>

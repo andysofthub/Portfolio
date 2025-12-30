@@ -65,7 +65,7 @@ export default function ResumePage() {
             Professional Summary
           </h2>
           <p className="text-sm leading-relaxed print:text-xs print:leading-snug text-neutral-700 dark:text-neutral-300">
-            Full-stack developer specializing in AI integration and automation with 3+ years of experience building
+            Full-stack developer specializing in AI integration and automation with 7+ years of experience building
             scalable web applications. Expert in Next.js, React, and modern JavaScript frameworks. Proven track record
             of implementing AI-powered features, automating workflows, and delivering production-ready solutions. Strong
             focus on performance optimization, user experience, and clean code architecture.
@@ -119,7 +119,7 @@ export default function ResumePage() {
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 italic">Self-Employed</p>
               </div>
-              <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300">2022 – Present</div>
+              <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300">2017 – Present</div>
             </div>
             <ul className="space-y-1.5 print:space-y-1 text-sm print:text-xs text-neutral-700 dark:text-neutral-300 ml-4 print:ml-3 list-disc">
               <li>
@@ -162,7 +162,7 @@ export default function ResumePage() {
                     Next.js · React · Tailwind CSS · RSS Integration · Email Automation
                   </p>
                 </div>
-                <div className="text-sm text-neutral-600 dark:text-neutral-400">2023 – 2024</div>
+                <div className="text-sm text-neutral-600 dark:text-neutral-400">2021 – 2022</div>
               </div>
               <ul className="space-y-1.5 print:space-y-1 text-sm print:text-xs text-neutral-700 dark:text-neutral-300 ml-4 print:ml-3 list-disc">
                 <li>
@@ -223,7 +223,7 @@ export default function ResumePage() {
                     React Native · Expo · Supabase · Cloudinary · Clerk Auth
                   </p>
                 </div>
-                <div className="text-sm text-neutral-600 dark:text-neutral-400">2023 – 2024</div>
+                <div className="text-sm text-neutral-600 dark:text-neutral-400">2019 – 2020</div>
               </div>
               <ul className="space-y-1.5 print:space-y-1 text-sm print:text-xs text-neutral-700 dark:text-neutral-300 ml-4 print:ml-3 list-disc">
                 <li>
@@ -252,7 +252,7 @@ export default function ResumePage() {
                   </h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400">FastAPI · OpenAI API · LLM Integration</p>
                 </div>
-                <div className="text-sm text-neutral-600 dark:text-neutral-400">2024 – 2025</div>
+                <div className="text-sm text-neutral-600 dark:text-neutral-400">2022 – 2023</div>
               </div>
               <ul className="space-y-1.5 print:space-y-1 text-sm print:text-xs text-neutral-700 dark:text-neutral-300 ml-4 print:ml-3 list-disc">
                 <li>
@@ -288,7 +288,7 @@ export default function ResumePage() {
                   <br />
                   GPA: 3.52 / 4.0
                 </p>
-                <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">2022 – Present</p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">2017 – Present</p>
               </div>
             </div>
 

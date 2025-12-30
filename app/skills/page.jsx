@@ -100,16 +100,16 @@ const skillCategories = [
     icon: FiLayers,
     description: 'End-to-end web application development',
     skills: [
-      { name: 'Next.js', highlight: true },
-      { name: 'React', highlight: true },
-      { name: 'TypeScript', highlight: true },
-      { name: 'JavaScript (ES6+)', highlight: true },
-      { name: 'Node.js', highlight: true },
-      { name: 'Express.js', highlight: true },
-      { name: 'REST APIs', highlight: true },
-      { name: 'HTML5 / CSS3', highlight: true },
-      { name: 'Tailwind CSS', highlight: true },
-      { name: 'Framer Motion' },
+      { name: 'Next.js', highlight: true, level: 92, years: 5 },
+      { name: 'React', highlight: true, level: 95, years: 7 },
+      { name: 'TypeScript', highlight: true, level: 88, years: 5 },
+      { name: 'JavaScript (ES6+)', highlight: true, level: 95, years: 7 },
+      { name: 'Node.js', highlight: true, level: 90, years: 6 },
+      { name: 'Express.js', highlight: true, level: 85, years: 5 },
+      { name: 'REST APIs', highlight: true, level: 92, years: 6 },
+      { name: 'HTML5 / CSS3', highlight: true, level: 95, years: 7 },
+      { name: 'Tailwind CSS', highlight: true, level: 90, years: 4 },
+      { name: 'Framer Motion', level: 80, years: 3 },
     ],
   },
   {
@@ -118,14 +118,14 @@ const skillCategories = [
     icon: FiCpu,
     description: 'AI integration and automation specialist',
     skills: [
-      { name: 'OpenAI API', highlight: true },
-      { name: 'LLM Integration', highlight: true },
-      { name: 'Prompt Engineering', highlight: true },
-      { name: 'AI Workflows', highlight: true },
-      { name: 'LangChain', highlight: true },
-      { name: 'Data Pipeline Automation', highlight: true },
-      { name: 'FastAPI', highlight: true },
-      { name: 'Python' },
+      { name: 'OpenAI API', highlight: true, level: 90, years: 3 },
+      { name: 'LLM Integration', highlight: true, level: 88, years: 3 },
+      { name: 'Prompt Engineering', highlight: true, level: 90, years: 2.5 },
+      { name: 'AI Workflows', highlight: true, level: 88, years: 3 },
+      { name: 'LangChain', highlight: true, level: 85, years: 2.5 },
+      { name: 'Data Pipeline Automation', highlight: true, level: 85, years: 3 },
+      { name: 'FastAPI', highlight: true, level: 80, years: 2.5 },
+      { name: 'Python', level: 85, years: 4 },
     ],
   },
   {
@@ -134,13 +134,13 @@ const skillCategories = [
     icon: FiCode,
     description: 'Modern UI/UX development',
     skills: [
-      { name: 'React', highlight: true },
-      { name: 'Next.js (App Router)', highlight: true },
-      { name: 'TypeScript', highlight: true },
-      { name: 'Tailwind CSS', highlight: true },
-      { name: 'Framer Motion', highlight: true },
-      { name: 'Responsive Design', highlight: true },
-      { name: 'Accessibility (WCAG)' },
+      { name: 'React', highlight: true, level: 95, years: 7 },
+      { name: 'Next.js (App Router)', highlight: true, level: 92, years: 5 },
+      { name: 'TypeScript', highlight: true, level: 88, years: 5 },
+      { name: 'Tailwind CSS', highlight: true, level: 90, years: 4 },
+      { name: 'Framer Motion', highlight: true, level: 80, years: 3 },
+      { name: 'Responsive Design', highlight: true, level: 95, years: 7 },
+      { name: 'Accessibility (WCAG)', level: 75, years: 3 },
     ],
   },
   {
@@ -149,13 +149,13 @@ const skillCategories = [
     icon: FiDatabase,
     description: 'Server-side development and API design',
     skills: [
-      { name: 'Node.js', highlight: true },
-      { name: 'Next.js API Routes', highlight: true },
-      { name: 'Express.js', highlight: true },
-      { name: 'FastAPI', highlight: true },
-      { name: 'REST APIs', highlight: true },
-      { name: 'Authentication & Authorization', highlight: true },
-      { name: 'Database Design' },
+      { name: 'Node.js', highlight: true, level: 90, years: 6 },
+      { name: 'Next.js API Routes', highlight: true, level: 92, years: 5 },
+      { name: 'Express.js', highlight: true, level: 85, years: 5 },
+      { name: 'FastAPI', highlight: true, level: 80, years: 2.5 },
+      { name: 'REST APIs', highlight: true, level: 92, years: 6 },
+      { name: 'Authentication & Authorization', highlight: true, level: 88, years: 5 },
+      { name: 'Database Design', level: 80, years: 4 },
     ],
   },
   {
@@ -164,11 +164,11 @@ const skillCategories = [
     icon: FiSmartphone,
     description: 'Cross-platform mobile applications',
     skills: [
-      { name: 'React Native', highlight: true },
-      { name: 'Expo', highlight: true },
-      { name: 'iOS Development', highlight: true },
-      { name: 'Android Development', highlight: true },
-      { name: 'App Store Publishing' },
+      { name: 'React Native', highlight: true, level: 85, years: 4 },
+      { name: 'Expo', highlight: true, level: 88, years: 4 },
+      { name: 'iOS Development', highlight: true, level: 75, years: 3 },
+      { name: 'Android Development', highlight: true, level: 75, years: 3 },
+      { name: 'App Store Publishing', level: 70, years: 2 },
     ],
   },
   {
@@ -177,15 +177,15 @@ const skillCategories = [
     icon: FiTool,
     description: 'Development tools and cloud platforms',
     skills: [
-      { name: 'Git / GitHub', highlight: true },
-      { name: 'Vercel', highlight: true },
-      { name: 'Netlify', highlight: true },
-      { name: 'Docker', highlight: true },
-      { name: 'MongoDB', highlight: true },
-      { name: 'Supabase', highlight: true },
-      { name: 'Firebase', highlight: true },
-      { name: 'VS Code', highlight: true },
-      { name: 'Figma' },
+      { name: 'Git / GitHub', highlight: true, level: 92, years: 7 },
+      { name: 'Vercel', highlight: true, level: 95, years: 5 },
+      { name: 'Netlify', highlight: true, level: 88, years: 4 },
+      { name: 'Docker', highlight: true, level: 75, years: 3 },
+      { name: 'MongoDB', highlight: true, level: 80, years: 4 },
+      { name: 'Supabase', highlight: true, level: 85, years: 3 },
+      { name: 'Firebase', highlight: true, level: 80, years: 3 },
+      { name: 'VS Code', highlight: true, level: 95, years: 7 },
+      { name: 'Figma', level: 75, years: 3 },
     ],
   },
 ];
@@ -242,28 +242,57 @@ export default function SkillsPage() {
                   <div className="flex flex-wrap gap-3">
                     {category.skills.map((skill, skillIndex) => {
                       const SkillIcon = getSkillIcon(skill.name);
+                      const level = skill.level || 0;
+                      const years = skill.years || 0;
+                      
                       return (
                         <div
                           key={skillIndex}
                           className={`
-                            group flex items-center gap-2 px-4 py-2.5 rounded-xl font-medium text-sm
+                            group relative flex flex-col gap-2 px-4 py-3 rounded-xl font-medium text-sm
                             bg-white dark:bg-neutral-900 text-neutral-700 dark:text-neutral-300 
                             border border-neutral-300 dark:border-neutral-700 
                             hover:border-blue-400 dark:hover:border-blue-600 
                             hover:bg-blue-50 dark:hover:bg-blue-950/20
                             transition-all duration-300 hover:scale-105 shadow-sm hover:shadow-md
+                            min-w-[160px]
                             ${isEven 
                               ? 'hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-950/20' 
                               : 'hover:border-purple-400 dark:hover:border-purple-600 hover:bg-purple-50 dark:hover:bg-purple-950/20'
                             }
                           `}
                         >
-                          <SkillIcon className={`text-base flex-shrink-0 ${
-                            isEven 
-                              ? 'text-blue-600 dark:text-blue-400' 
-                              : 'text-purple-600 dark:text-purple-400'
-                          }`} />
-                          <span>{skill.name}</span>
+                          <div className="flex items-center gap-2">
+                            <SkillIcon className={`text-base flex-shrink-0 ${
+                              isEven 
+                                ? 'text-blue-600 dark:text-blue-400' 
+                                : 'text-purple-600 dark:text-purple-400'
+                            }`} />
+                            <span className="font-semibold">{skill.name}</span>
+                          </div>
+                          {level > 0 && (
+                            <div className="space-y-1">
+                              <div className="flex items-center justify-between text-xs">
+                                <span className="text-neutral-500 dark:text-neutral-400">Proficiency</span>
+                                <span className="font-semibold text-neutral-700 dark:text-neutral-300">{level}%</span>
+                              </div>
+                              <div className="w-full h-1.5 bg-neutral-200 dark:bg-neutral-800 rounded-full overflow-hidden">
+                                <div 
+                                  className={`h-full rounded-full transition-all duration-500 ${
+                                    isEven 
+                                      ? 'bg-gradient-to-r from-blue-500 to-blue-600' 
+                                      : 'bg-gradient-to-r from-purple-500 to-pink-600'
+                                  }`}
+                                  style={{ width: `${level}%` }}
+                                />
+                              </div>
+                              {years > 0 && (
+                                <div className="text-xs text-neutral-500 dark:text-neutral-400">
+                                  {years} {years === 1 ? 'year' : 'years'} experience
+                                </div>
+                              )}
+                            </div>
+                          )}
                         </div>
                       );
                     })}

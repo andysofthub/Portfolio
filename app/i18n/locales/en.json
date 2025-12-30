@@ -1,0 +1,33 @@
+{
+  "common": {
+    "name": "Andy Chan",
+    "title": "Full-Stack Developer | AI Integration Specialist",
+    "location": "Brockport, NY, USA"
+  },
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Full-Stack Developer with a passion for AI integration and automation",
+    "description": "I'm a passionate full-stack developer with a strong focus on AI integration and automation. My journey in software development began in 2017, and over the past 7+ years, I've been dedicated to building scalable web applications that solve real-world problems."
+  },
+  "skills": {
+    "title": "Skills & Expertise",
+    "subtitle": "Technical skills and expertise in modern web technologies"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "A collection of projects showcasing my skills in full-stack development, AI integration, and automation."
+  },
+  "contact": {
+    "title": "Contact Me",
+    "subtitle": "I typically respond within 24 hours. Available for freelance projects, full-time opportunities, and collaborations.",
+    "responseTime": "Response Time",
+    "responseDescription": "I typically respond to messages within 24 hours. For urgent matters, please call directly."
+  }
+}
+
