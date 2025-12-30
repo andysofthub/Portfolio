@@ -1,70 +1,43 @@
 'use client';
 
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import {
   FiMail,
-  FiGithub,
-  FiLinkedin,
   FiMapPin,
-  FiExternalLink,
-  FiDownload,
-  FiPrinter,
-  FiCode,
-  FiCpu,
-  FiZap,
-  FiTrendingUp,
 } from 'react-icons/fi';
+import { PERSONAL_INFO } from '../constants/personalInfo';
 
 export default function ResumePage() {
-  const name = 'Tony Chan';
-  const title = 'Full-Stack Developer | AI Integration Specialist';
-  const location = 'Brockport, NY, USA';
-  const email = 'chantony9333@gmail.com';
-  const github = 'https://github.com/chantony33';
-  const linkedin = 'https://linkedin.com/in/tony-chan';
-  const portfolio = 'https://tonychan.com.np';
-  const phone = '+1 (585) 957-2805';
+  const router = useRouter();
+  const { name, title, location, email, phone } = PERSONAL_INFO;
 
-  const onPrint = () => {
-    if (typeof window === 'undefined') return;
-    window.print();
-  };
+  // Redirect to skills page if not in development mode
+  React.useEffect(() => {
+    if (process.env.NODE_ENV !== 'development') {
+      router.push('/skills');
+    }
+  }, [router]);
+
+  // Don't render content if not in development
+  if (process.env.NODE_ENV !== 'development') {
+    return null;
+  }
+
 
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 px-4 sm:px-6 py-6 sm:py-10 print:bg-white print:px-0 print:py-0">
-      {/* Print Actions */}
-      <div className="max-w-4xl mx-auto mb-6 print:hidden">
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div className="text-xs text-neutral-600 dark:text-neutral-400">
-            ATS-optimized resume · Print to save as PDF
-          </div>
-          <div className="flex flex-wrap gap-2">
-            <button
-              onClick={onPrint}
-              className="inline-flex items-center gap-2 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 px-3 py-2 text-sm font-medium hover:bg-neutral-50 dark:hover:bg-neutral-800 transition"
-            >
-              <FiPrinter className="text-sm" /> Print / PDF
-            </button>
-            <a
-              href="/api/download-cv"
-              className="inline-flex items-center gap-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white px-3 py-2 text-sm font-medium transition"
-            >
-              <FiDownload className="text-sm" /> Download PDF
-            </a>
-          </div>
-        </div>
-      </div>
+    <div className="min-h-screen bg-white dark:bg-neutral-950 text-neutral-900 dark:text-neutral-100 px-4 sm:px-6 py-6 sm:py-10 print:bg-white print:px-0 print:py-2">
 
       {/* Resume Content */}
       <div className="max-w-4xl mx-auto bg-white dark:bg-neutral-950 print:bg-white">
         {/* Header */}
-        <header className="mb-8 print:mb-6">
-          <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
+        <header className="mb-8 print:mb-3 print:pb-2">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-4">
             <div>
-              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-2 text-neutral-900 dark:text-neutral-100">
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-2 print:text-3xl print:mb-1 text-neutral-900 dark:text-neutral-100">
                 {name}
               </h1>
-              <p className="text-lg md:text-xl text-neutral-700 dark:text-neutral-300 font-medium mb-2">
+              <p className="text-lg md:text-xl text-neutral-700 dark:text-neutral-300 font-medium mb-2 print:text-base print:mb-1">
                 {title}
               </p>
               <div className="flex items-center gap-2 text-sm text-neutral-600 dark:text-neutral-400">
@@ -72,28 +45,14 @@ export default function ResumePage() {
                 <span>{location}</span>
               </div>
             </div>
-            <div className="text-sm space-y-1.5 text-neutral-700 dark:text-neutral-300">
+            <div className="flex flex-col items-end text-sm text-neutral-700 dark:text-neutral-300 space-y-1">
               <div className="flex items-center gap-2">
                 <FiMail className="text-xs opacity-70" />
                 <a href={`mailto:${email}`} className="hover:underline">{email}</a>
               </div>
               <div className="flex items-center gap-2">
-                <FiGithub className="text-xs opacity-70" />
-                <a href={github} target="_blank" rel="noreferrer" className="hover:underline">
-                  github.com/chantony33
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <FiLinkedin className="text-xs opacity-70" />
-                <a href={linkedin} target="_blank" rel="noreferrer" className="hover:underline">
-                  linkedin.com/in/tony-chan
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <FiExternalLink className="text-xs opacity-70" />
-                <a href={portfolio} target="_blank" rel="noreferrer" className="hover:underline">
-                  tonychan.com.np
-                </a>
+                <span className="text-xs opacity-70">Phone:</span>
+                <a href={`tel:${phone.replace(/\s/g, '')}`} className="hover:underline">{phone}</a>
               </div>
             </div>
           </div>
@@ -101,11 +60,11 @@ export default function ResumePage() {
         </header>
 
         {/* Professional Summary */}
-        <section className="mb-8 print:mb-6">
-          <h2 className="text-lg font-bold uppercase tracking-wide mb-3 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
+        <section className="mb-8 print:mb-3 print:pb-1">
+          <h2 className="text-lg font-bold uppercase tracking-wide mb-3 print:text-base print:mb-1.5 print:pb-0.5 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
             Professional Summary
           </h2>
-          <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">
+          <p className="text-sm leading-relaxed print:text-xs print:leading-snug text-neutral-700 dark:text-neutral-300">
             Full-stack developer specializing in AI integration and automation with 3+ years of experience building
             scalable web applications. Expert in Next.js, React, and modern JavaScript frameworks. Proven track record
             of implementing AI-powered features, automating workflows, and delivering production-ready solutions. Strong
@@ -114,11 +73,11 @@ export default function ResumePage() {
         </section>
 
         {/* Technical Skills */}
-        <section className="mb-8 print:mb-6">
-          <h2 className="text-lg font-bold uppercase tracking-wide mb-3 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
+        <section className="mb-8 print:mb-3 print:pb-1">
+          <h2 className="text-lg font-bold uppercase tracking-wide mb-3 print:text-base print:mb-1.5 print:pb-0.5 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
             Technical Skills
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 print:gap-2 text-sm print:text-xs">
             <div>
               <h3 className="font-semibold mb-2 text-neutral-900 dark:text-neutral-100">Frontend</h3>
               <p className="text-neutral-700 dark:text-neutral-300">
@@ -147,8 +106,8 @@ export default function ResumePage() {
         </section>
 
         {/* Professional Experience */}
-        <section className="mb-8 print:mb-6">
-          <h2 className="text-lg font-bold uppercase tracking-wide mb-4 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
+        <section className="mb-8 print:mb-3 print:pb-1">
+          <h2 className="text-lg font-bold uppercase tracking-wide mb-4 print:text-base print:mb-2 print:pb-0.5 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
             Professional Experience
           </h2>
 
@@ -160,9 +119,9 @@ export default function ResumePage() {
                 </h3>
                 <p className="text-sm text-neutral-600 dark:text-neutral-400 italic">Self-Employed</p>
               </div>
-              <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300">2024 – Present</div>
+              <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300">2022 – Present</div>
             </div>
-            <ul className="space-y-1.5 text-sm text-neutral-700 dark:text-neutral-300 ml-4 list-disc">
+            <ul className="space-y-1.5 print:space-y-1 text-sm print:text-xs text-neutral-700 dark:text-neutral-300 ml-4 print:ml-3 list-disc">
               <li>
                 Developed and deployed 5+ production web applications using Next.js, React, and modern JavaScript
                 frameworks
@@ -186,12 +145,12 @@ export default function ResumePage() {
         </section>
 
         {/* Key Projects */}
-        <section className="mb-8 print:mb-6">
-          <h2 className="text-lg font-bold uppercase tracking-wide mb-4 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
+        <section className="mb-8 print:mb-3 print:pb-1">
+          <h2 className="text-lg font-bold uppercase tracking-wide mb-4 print:text-base print:mb-2 print:pb-0.5 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
             Key Projects
           </h2>
 
-          <div className="space-y-6">
+          <div className="space-y-6 print:space-y-3">
             {/* Project 1 */}
             <div className="mb-5">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-2">
@@ -203,9 +162,9 @@ export default function ResumePage() {
                     Next.js · React · Tailwind CSS · RSS Integration · Email Automation
                   </p>
                 </div>
-                <div className="text-sm text-neutral-600 dark:text-neutral-400">2024</div>
+                <div className="text-sm text-neutral-600 dark:text-neutral-400">2023 – 2024</div>
               </div>
-              <ul className="space-y-1.5 text-sm text-neutral-700 dark:text-neutral-300 ml-4 list-disc">
+              <ul className="space-y-1.5 print:space-y-1 text-sm print:text-xs text-neutral-700 dark:text-neutral-300 ml-4 print:ml-3 list-disc">
                 <li>
                   Built responsive portfolio with 3-panel layout, dark mode, and smooth animations using Framer Motion
                 </li>
@@ -235,9 +194,9 @@ export default function ResumePage() {
                     Next.js · React · Tailwind CSS · SEO Optimization
                   </p>
                 </div>
-                <div className="text-sm text-neutral-600 dark:text-neutral-400">2024</div>
+                <div className="text-sm text-neutral-600 dark:text-neutral-400">2022 – 2023</div>
               </div>
-              <ul className="space-y-1.5 text-sm text-neutral-700 dark:text-neutral-300 ml-4 list-disc">
+              <ul className="space-y-1.5 print:space-y-1 text-sm print:text-xs text-neutral-700 dark:text-neutral-300 ml-4 print:ml-3 list-disc">
                 <li>
                   Designed and developed modern restaurant website showcasing Nepalese cuisine with culturally authentic
                   design
@@ -264,9 +223,9 @@ export default function ResumePage() {
                     React Native · Expo · Supabase · Cloudinary · Clerk Auth
                   </p>
                 </div>
-                <div className="text-sm text-neutral-600 dark:text-neutral-400">2024 – 2025</div>
+                <div className="text-sm text-neutral-600 dark:text-neutral-400">2023 – 2024</div>
               </div>
-              <ul className="space-y-1.5 text-sm text-neutral-700 dark:text-neutral-300 ml-4 list-disc">
+              <ul className="space-y-1.5 print:space-y-1 text-sm print:text-xs text-neutral-700 dark:text-neutral-300 ml-4 print:ml-3 list-disc">
                 <li>
                   Developed and published cross-platform wallpaper app on both iOS App Store and Google Play Store
                 </li>
@@ -293,9 +252,9 @@ export default function ResumePage() {
                   </h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400">FastAPI · OpenAI API · LLM Integration</p>
                 </div>
-                <div className="text-sm text-neutral-600 dark:text-neutral-400">2025</div>
+                <div className="text-sm text-neutral-600 dark:text-neutral-400">2024 – 2025</div>
               </div>
-              <ul className="space-y-1.5 text-sm text-neutral-700 dark:text-neutral-300 ml-4 list-disc">
+              <ul className="space-y-1.5 print:space-y-1 text-sm print:text-xs text-neutral-700 dark:text-neutral-300 ml-4 print:ml-3 list-disc">
                 <li>
                   Designed and prototyped AI-powered educational assistant using FastAPI and OpenAI for learning
                   enhancement
@@ -314,10 +273,10 @@ export default function ResumePage() {
         </section>
 
         {/* Education & Certifications */}
-        <section className="mb-8 print:mb-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <section className="mb-8 print:mb-3 print:pb-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 print:gap-4">
             <div>
-              <h2 className="text-lg font-bold uppercase tracking-wide mb-4 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
+              <h2 className="text-lg font-bold uppercase tracking-wide mb-4 print:text-base print:mb-2 print:pb-0.5 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
                 Education
               </h2>
               <div>
@@ -329,12 +288,12 @@ export default function ResumePage() {
                   <br />
                   GPA: 3.52 / 4.0
                 </p>
-                <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">2024 – Present</p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">2022 – Present</p>
               </div>
             </div>
 
             <div>
-              <h2 className="text-lg font-bold uppercase tracking-wide mb-4 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
+              <h2 className="text-lg font-bold uppercase tracking-wide mb-4 print:text-base print:mb-2 print:pb-0.5 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
                 Certifications
               </h2>
               <div className="space-y-3">
@@ -354,11 +313,11 @@ export default function ResumePage() {
         </section>
 
         {/* Additional Skills & Keywords for ATS */}
-        <section className="print:mb-4">
-          <h2 className="text-lg font-bold uppercase tracking-wide mb-3 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
+        <section className="print:mb-2 print:pb-1">
+          <h2 className="text-lg font-bold uppercase tracking-wide mb-3 print:text-base print:mb-1.5 print:pb-0.5 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
             Additional Skills
           </h2>
-          <div className="flex flex-wrap gap-2 text-xs">
+          <div className="flex flex-wrap gap-2 print:gap-1.5 text-xs print:text-[10px]">
             {[
               'Full-Stack Development',
               'AI Integration',

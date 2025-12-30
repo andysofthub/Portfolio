@@ -11,17 +11,19 @@ import {
   FiMail,
   FiGithub,
   FiLinkedin,
-  FiTwitter,
   FiDownload,
   FiCheckCircle,
   FiClock,
   FiTarget,
   FiAward,
 } from "react-icons/fi";
+import { PERSONAL_INFO } from "../constants/personalInfo";
 
 import { SplineErrorFilter } from "./SplineErrorFilter"; // Import the improved filter
 
 export default function LeftPannel() {
+  const { name, email, social } = PERSONAL_INFO;
+  
   return (
     <div className="bg-green300 h-full w-full flex flex-col lg:pl-10 lg:overflow-y-auto lg:no-scrollbar z-50 lg:max-h-screen">
       {/* Enhanced Spline error filter */}
@@ -46,7 +48,7 @@ export default function LeftPannel() {
           <div className="flex items-center justify-between w-full px-4 py-3 rounded-2xl bg-gradient-to-r from-blue-50/80 via-purple-50/80 to-pink-50/80 dark:from-blue-900/20 dark:via-purple-900/20 dark:to-pink-900/20 border border-neutral-200/50 dark:border-neutral-700/50 backdrop-blur-sm">
             <Link href="/" className="flex-1">
               <h1 className="font-bold text-lg sm:text-xl md:text-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent text-center">
-                Tony Chan
+                {name}
               </h1>
             </Link>
             <div className="ml-3 p-1.5 rounded-full bg-white/70 dark:bg-black/30 border border-neutral-300/50 dark:border-neutral-600/50 shadow-sm hover:shadow-md transition-all duration-200">
@@ -62,14 +64,14 @@ export default function LeftPannel() {
           {/* Quick links */}
           <div className="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 w-full text-[14px] sm:text-[15px]">
             <a
-              href="mailto:chantony9333@gmail.com"
+              href={`mailto:${email}`}
               className="flex items-center gap-2 px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition w-full text-neutral-900 dark:text-neutral-100"
             >
               <FiMail className="opacity-80 text-[16px] sm:text-[17px]" />
               <span>Email</span>
             </a>
             <a
-              href="https://github.com/chantony33"
+              href={social.github}
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition w-full text-neutral-900 dark:text-neutral-100"
@@ -78,7 +80,7 @@ export default function LeftPannel() {
               <span>GitHub</span>
             </a>
             <a
-              href="https://linkedin.com/in/tony-chan"
+              href={social.linkedin}
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition w-full text-neutral-900 dark:text-neutral-100"
@@ -87,13 +89,12 @@ export default function LeftPannel() {
               <span>LinkedIn</span>
             </a>
             <a
-              href="https://twitter.com/tonychan_dev"
-              target="_blank"
-              rel="noreferrer"
+              href={social.resume}
+              download
               className="flex items-center gap-2 px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition w-full text-neutral-900 dark:text-neutral-100"
             >
-              <FiTwitter className="opacity-80 text-[16px] sm:text-[17px]" />
-              <span>Twitter</span>
+              <FiDownload className="opacity-80 text-[16px] sm:text-[17px]" />
+              <span>Resume</span>
             </a>
           </div>
 

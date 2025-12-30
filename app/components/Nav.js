@@ -4,12 +4,23 @@ import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import clsx from 'clsx';
 
-const navItems = [
-  { name: 'Resume', path: '/resume' },
-  { name: 'Skills', path: '/skills' },
-  { name: 'Projects', path: '/projects' },
-  { name: 'Contact', path: '/contact' },
-];
+// Filter nav items based on environment
+const getNavItems = () => {
+  const items = [
+    { name: 'Skills', path: '/skills' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Contact', path: '/contact' },
+  ];
+  
+  // Only show Resume in development mode
+  if (process.env.NODE_ENV === 'development') {
+    items.unshift({ name: 'Resume', path: '/resume' });
+  }
+  
+  return items;
+};
+
+const navItems = getNavItems();
 
 export default function Nav() {
   const pathname = usePathname();

@@ -5,6 +5,7 @@ import LeftPannel from "./components/leftPannel";
 import Nav from "./components/Nav";
 import Providers from "@/providers";
 import { Analytics } from "@vercel/analytics/next";
+import { PERSONAL_INFO } from "./constants/personalInfo";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -18,7 +19,7 @@ const geistMono = localFont({
 });
 
 export const metadata = {
-  title: "Tony Chan",
+  title: PERSONAL_INFO.name,
   description: "Creator of the software solutions",
 };
 
