@@ -5,10 +5,9 @@ import { useState } from 'react';
 import clsx from 'clsx';
 
 const navItems = [
-  { name: 'Blog', path: '/' },
-  { name: 'Resume', path: '/about' },
-  { name: 'Stack', path: '/stack' },
-  { name: 'Timeline', path: '/timeline' },
+  { name: 'Resume', path: '/resume' },
+  { name: 'Skills', path: '/skills' },
+  { name: 'Projects', path: '/projects' },
   { name: 'Contact', path: '/contact' },
 ];
 

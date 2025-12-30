@@ -1,7 +1,6 @@
 // app/layout.jsx
 import localFont from "next/font/local";
 import "./globals.css";
-import Rightpannel from "./components/Rightpannel";
 import LeftPannel from "./components/leftPannel";
 import Nav from "./components/Nav";
 import Providers from "@/providers";
@@ -42,21 +41,11 @@ export default function RootLayout({ children }) {
               <LeftPannel />
             </div>
 
-            {/* MOBILE RIGHT PANEL */}
-            <div className="lg:hidden md:hidden overflow-hidden w-full">
-              <Rightpannel />
-            </div>
-
             {/* MAIN CONTENT */}
             <div className="flex-1 overflow-y-scroll no-scrollbar w-full h-full bg-white dark:bg-[#0f0f0f]">
               {/* Nav now starts flush at top */}
               <Nav />
               {children}
-            </div>
-
-            {/* RIGHT PANEL */}
-            <div className="hidden lg:block md:flex overflow-hidden w-full lg:w-1/4 border-l border-neutral-200 dark:border-neutral-800">
-              <Rightpannel />
             </div>
           </div>
         </Providers>

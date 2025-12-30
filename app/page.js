@@ -1,9 +1,5 @@
-import React from 'react'
-import BlogsPage from './blogs/page'
-function page() {
-  return (
-  <BlogsPage/>
-  )
-}
+import { redirect } from 'next/navigation';
 
-export default page
+export default function HomePage() {
+  redirect('/resume');
+}
