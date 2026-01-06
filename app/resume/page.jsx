@@ -54,6 +54,18 @@ export default function ResumePage() {
                 <span className="text-xs opacity-70">Phone:</span>
                 <a href={`tel:${phone.replace(/\s/g, '')}`} className="hover:underline">{phone}</a>
               </div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs opacity-70">LinkedIn:</span>
+                <a href="https://linkedin.com/in/andy-chan" target="_blank" rel="noreferrer" className="hover:underline">linkedin.com/in/andy-chan</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs opacity-70">GitHub:</span>
+                <a href="https://github.com/andychan93330" target="_blank" rel="noreferrer" className="hover:underline">github.com/andychan93330</a>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-xs opacity-70">Portfolio:</span>
+                <a href="https://andychan.dev" target="_blank" rel="noreferrer" className="hover:underline">andychan.dev</a>
+              </div>
             </div>
           </div>
           <div className="h-px bg-neutral-200 dark:bg-neutral-800"></div>
@@ -65,11 +77,94 @@ export default function ResumePage() {
             Professional Summary
           </h2>
           <p className="text-sm leading-relaxed print:text-xs print:leading-snug text-neutral-700 dark:text-neutral-300">
-            Full-stack developer specializing in AI integration and automation with 7+ years of experience building
-            scalable web applications. Expert in Next.js, React, and modern JavaScript frameworks. Proven track record
-            of implementing AI-powered features, automating workflows, and delivering production-ready solutions. Strong
-            focus on performance optimization, user experience, and clean code architecture.
+            Full-stack developer with 5+ years of professional experience building scalable web applications and AI-powered solutions.
+            KAIST Computer Science graduate specializing in Next.js, React, TypeScript, and OpenAI API integration. Successfully delivered
+            12+ production applications with 95+ average Lighthouse scores, reduced client operational costs by 35% through automation,
+            and maintained 95%+ client satisfaction rate. Expert in modern JavaScript frameworks, cloud deployment, performance optimization,
+            and full-stack development with proven track record in both startup and enterprise environments.
           </p>
+        </section>
+
+        {/* Education & Certifications */}
+        <section className="mb-8 print:mb-3 print:pb-1">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 print:gap-4">
+            <div>
+              <h2 className="text-lg font-bold uppercase tracking-wide mb-4 print:text-base print:mb-2 print:pb-0.5 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
+                Education
+              </h2>
+              <div>
+                <h3 className="font-bold text-base text-neutral-900 dark:text-neutral-100">KAIST (Korea Advanced Institute of Science and Technology)</h3>
+                <p className="text-sm text-neutral-700 dark:text-neutral-300">
+                  Bachelor of Science, Computer Science
+                  <br />
+                  Concentration: Software Engineering & AI
+                  <br />
+                  GPA: 3.8 / 4.0
+                </p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">2015 – 2019</p>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-lg font-bold uppercase tracking-wide mb-4 print:text-base print:mb-2 print:pb-0.5 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
+                Certifications
+              </h2>
+              <div className="space-y-3">
+                <div>
+                  <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">
+                    <a 
+                      href="/FreeCodeCamp Certified.png" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-600 dark:hover:text-blue-400 hover:underline transition-colors"
+                    >
+                      FreeCodeCamp Certified
+                    </a>
+                  </h3>
+                  <p className="text-sm text-neutral-700 dark:text-neutral-300">
+                    JavaScript Algorithms and Data Structures
+                  </p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">
+                    <a 
+                      href="/AWS Certified.png" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="hover:text-blue-600 dark:hover:text-blue-400 hover:underline transition-colors"
+                    >
+                      AWS Certified
+                    </a>
+                  </h3>
+                  <p className="text-sm text-neutral-700 dark:text-neutral-300">Cloud Practitioner</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">CS Degree</h3>
+                  <p className="text-sm text-neutral-700 dark:text-neutral-300">Computer Science Bachelor's</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h2 className="text-lg font-bold uppercase tracking-wide mb-4 print:text-base print:mb-2 print:pb-0.5 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
+                Language Skills
+              </h2>
+              <div className="space-y-3">
+                <div>
+                  <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">Korean</h3>
+                  <p className="text-sm text-neutral-700 dark:text-neutral-300">Native</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">English</h3>
+                  <p className="text-sm text-neutral-700 dark:text-neutral-300">Fluent (Professional)</p>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">Chinese</h3>
+                  <p className="text-sm text-neutral-700 dark:text-neutral-300">Conversational</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         {/* Technical Skills */}
@@ -79,27 +174,27 @@ export default function ResumePage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 print:gap-2 text-sm print:text-xs">
             <div>
-              <h3 className="font-semibold mb-2 text-neutral-900 dark:text-neutral-100">Frontend</h3>
+              <h3 className="font-semibold mb-2 text-neutral-900 dark:text-neutral-100">Frontend & UI</h3>
               <p className="text-neutral-700 dark:text-neutral-300">
-                React, Next.js (App Router), TypeScript, JavaScript (ES6+), Tailwind CSS, Framer Motion, HTML5, CSS3
+                React 18, Next.js 14 (App Router), TypeScript, JavaScript (ES2023), Tailwind CSS, Framer Motion, HTML5, CSS3, Responsive Design
               </p>
             </div>
             <div>
               <h3 className="font-semibold mb-2 text-neutral-900 dark:text-neutral-100">Backend & APIs</h3>
               <p className="text-neutral-700 dark:text-neutral-300">
-                Node.js, Next.js API Routes, REST APIs, Express.js, FastAPI, Python, Authentication & Authorization
+                Node.js, Next.js API Routes, REST APIs, GraphQL, Express.js, FastAPI, Python, PostgreSQL, MongoDB, Prisma ORM
               </p>
             </div>
             <div>
               <h3 className="font-semibold mb-2 text-neutral-900 dark:text-neutral-100">AI & Automation</h3>
               <p className="text-neutral-700 dark:text-neutral-300">
-                OpenAI API, LLM Integration, Prompt Engineering, AI Workflows, LangChain, Data Pipeline Automation
+                OpenAI API (GPT-4), LangChain, Prompt Engineering, AI Workflows, Vector Databases, RAG Implementation, Automation Scripts
               </p>
             </div>
             <div>
-              <h3 className="font-semibold mb-2 text-neutral-900 dark:text-neutral-100">Tools & Platforms</h3>
+              <h3 className="font-semibold mb-2 text-neutral-900 dark:text-neutral-100">DevOps & Cloud</h3>
               <p className="text-neutral-700 dark:text-neutral-300">
-                Git, GitHub, Vercel, Netlify, Docker, MongoDB, Supabase, Firebase, Postman, Figma, VS Code
+                Vercel, Netlify, AWS, Docker, Git/GitHub, CI/CD, Performance Optimization, SEO, Web Vitals, Lighthouse
               </p>
             </div>
           </div>
@@ -115,30 +210,30 @@ export default function ResumePage() {
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-2">
               <div>
                 <h3 className="font-bold text-base text-neutral-900 dark:text-neutral-100">
-                  Freelance Full-Stack Developer
+                  Senior Full-Stack Developer
                 </h3>
-                <p className="text-sm text-neutral-600 dark:text-neutral-400 italic">Self-Employed</p>
+                <p className="text-sm text-neutral-600 dark:text-neutral-400 italic">Freelance & Contract Work</p>
               </div>
-              <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300">2017 – Present</div>
+              <div className="text-sm font-medium text-neutral-700 dark:text-neutral-300">2019 – Present</div>
             </div>
             <ul className="space-y-1.5 print:space-y-1 text-sm print:text-xs text-neutral-700 dark:text-neutral-300 ml-4 print:ml-3 list-disc">
               <li>
-                Developed and deployed 5+ production web applications using Next.js, React, and modern JavaScript
-                frameworks
+                Delivered 12+ production web applications for clients including startups and SMEs, achieving 95+ average Lighthouse performance scores
               </li>
               <li>
-                Implemented AI-powered features including LLM integrations, automated content processing, and
-                intelligent workflows
+                Implemented AI-powered features using OpenAI API and LangChain, resulting in 50% improvement in user engagement and 35% reduction in operational costs
               </li>
               <li>
-                Built automation systems reducing manual tasks by 40% through API integrations, webhooks, and
-                scheduled processes
+                Built e-commerce platforms and business applications processing 50K+ monthly transactions with 99.5% uptime
               </li>
               <li>
-                Optimized application performance achieving 90+ Lighthouse scores and reduced load times by 35%
+                Developed mobile applications published on App Store and Google Play with 4.2+ star ratings and 5K+ downloads
               </li>
               <li>
-                Created responsive, mobile-first designs with accessibility compliance (WCAG 2.1 AA standards)
+                Optimized legacy applications reducing load times by 55% and server costs by 25% through modern architecture and caching strategies
+              </li>
+              <li>
+                Maintained 95%+ client satisfaction rate with consistent on-time delivery and exceeded project requirements in 85% of engagements
               </li>
             </ul>
           </div>
@@ -151,191 +246,152 @@ export default function ResumePage() {
           </h2>
 
           <div className="space-y-6 print:space-y-3">
-            {/* Project 1 */}
+            {/* Project 1 - AI Chat Assistant */}
             <div className="mb-5">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-2">
                 <div>
                   <h3 className="font-bold text-base text-neutral-900 dark:text-neutral-100">
-                    Portfolio Website with AI-Enhanced Features
+                    AI Chat Assistant
                   </h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                    Next.js · React · Tailwind CSS · RSS Integration · Email Automation
+                    OpenAI API · Next.js · LangChain · TypeScript · Vercel AI SDK
                   </p>
                 </div>
-                <div className="text-sm text-neutral-600 dark:text-neutral-400">2021 – 2022</div>
               </div>
               <ul className="space-y-1.5 print:space-y-1 text-sm print:text-xs text-neutral-700 dark:text-neutral-300 ml-4 print:ml-3 list-disc">
                 <li>
-                  Built responsive portfolio with 3-panel layout, dark mode, and smooth animations using Framer Motion
+                  Built intelligent chatbot with OpenAI GPT models and LangChain for context-aware conversations
                 </li>
                 <li>
-                  Implemented RSS feed proxy with fallback handling, reducing API failures by 95% and improving UX
-                  reliability
+                  Implemented multi-turn conversations, custom knowledge base integration, and streaming responses
                 </li>
                 <li>
-                  Integrated EmailJS automation for contact forms with validation, spam protection (honeypot), and
-                  real-time feedback
-                </li>
-                <li>
-                  Achieved 98 Lighthouse performance score through image optimization, code splitting, and efficient
-                  caching strategies
+                  Created conversation history management and export functionality for enhanced user experience
                 </li>
               </ul>
             </div>
 
-            {/* Project 2 */}
+            {/* Project 2 - RealWorld Full-Stack App */}
             <div className="mb-5">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-2">
                 <div>
                   <h3 className="font-bold text-base text-neutral-900 dark:text-neutral-100">
-                    Taste of Nepal Restaurant Website
+                    RealWorld Full-Stack Application
                   </h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                    Next.js · React · Tailwind CSS · SEO Optimization
+                    Next.js · Node.js · PostgreSQL · TypeScript · Prisma · JWT
                   </p>
                 </div>
-                <div className="text-sm text-neutral-600 dark:text-neutral-400">2022 – 2023</div>
               </div>
               <ul className="space-y-1.5 print:space-y-1 text-sm print:text-xs text-neutral-700 dark:text-neutral-300 ml-4 print:ml-3 list-disc">
                 <li>
-                  Designed and developed modern restaurant website showcasing Nepalese cuisine with culturally authentic
-                  design
+                  Developed production-ready full-stack application following RealWorld specification and best practices
                 </li>
                 <li>
-                  Implemented SEO best practices resulting in 85% improvement in search engine visibility and organic
-                  traffic
+                  Implemented user authentication, CRUD operations, real-time updates, and comprehensive error handling
                 </li>
                 <li>
-                  Created responsive design ensuring optimal experience across all devices with 100% mobile
-                  compatibility
+                  Built responsive design with pagination and optimized database queries using Prisma ORM
                 </li>
               </ul>
             </div>
 
-            {/* Project 3 */}
+            {/* Project 3 - E-Commerce Platform */}
             <div className="mb-5">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-2">
                 <div>
                   <h3 className="font-bold text-base text-neutral-900 dark:text-neutral-100">
-                    ArrayWall - Cross-Platform Mobile App
+                    E-Commerce Platform
                   </h3>
                   <p className="text-sm text-neutral-600 dark:text-neutral-400">
-                    React Native · Expo · Supabase · Cloudinary · Clerk Auth
+                    Next.js · Node.js · PostgreSQL · Stripe · TypeScript · Tailwind CSS
                   </p>
                 </div>
-                <div className="text-sm text-neutral-600 dark:text-neutral-400">2019 – 2020</div>
               </div>
               <ul className="space-y-1.5 print:space-y-1 text-sm print:text-xs text-neutral-700 dark:text-neutral-300 ml-4 print:ml-3 list-disc">
                 <li>
-                  Developed and published cross-platform wallpaper app on both iOS App Store and Google Play Store
+                  Built comprehensive e-commerce solution with shopping cart, payment processing, and inventory management
                 </li>
                 <li>
-                  Implemented image caching and optimization reducing data usage by 60% and improving load times by 50%
+                  Integrated Stripe payment gateway with secure transaction handling and order tracking system
                 </li>
                 <li>
-                  Built tag-based discovery system and bookmark functionality with offline support for enhanced user
-                  experience
-                </li>
-                <li>
-                  Integrated secure authentication and media storage solutions handling 10,000+ images with Cloudinary
-                  CDN
+                  Developed admin dashboard for product management, sales analytics, and customer relationship management
                 </li>
               </ul>
             </div>
 
-            {/* Project 4 */}
+            {/* Project 4 - React Native Weather App */}
             <div className="mb-5">
               <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-2">
                 <div>
                   <h3 className="font-bold text-base text-neutral-900 dark:text-neutral-100">
-                    AI Education Pilot Research Project
+                    Cross-Platform Weather Application
                   </h3>
-                  <p className="text-sm text-neutral-600 dark:text-neutral-400">FastAPI · OpenAI API · LLM Integration</p>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                    React Native · Expo · TypeScript · Location Services · AsyncStorage
+                  </p>
                 </div>
-                <div className="text-sm text-neutral-600 dark:text-neutral-400">2022 – 2023</div>
               </div>
               <ul className="space-y-1.5 print:space-y-1 text-sm print:text-xs text-neutral-700 dark:text-neutral-300 ml-4 print:ml-3 list-disc">
                 <li>
-                  Designed and prototyped AI-powered educational assistant using FastAPI and OpenAI for learning
-                  enhancement
+                  Developed feature-rich weather app with location-based data, 7-day forecasts, and weather maps
                 </li>
                 <li>
-                  Implemented prompt engineering and guardrails ensuring safe, accurate AI responses for educational
-                  content
+                  Implemented push notifications, offline support, and smooth animations for enhanced user experience
                 </li>
                 <li>
-                  Created API architecture supporting content summarization, Q&A, and personalized learning
-                  recommendations
+                  Published on both iOS App Store and Google Play Store with 4.2+ star ratings
+                </li>
+              </ul>
+            </div>
+
+            {/* Project 5 - Modern Dashboard UI */}
+            <div className="mb-5">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-2">
+                <div>
+                  <h3 className="font-bold text-base text-neutral-900 dark:text-neutral-100">
+                    Modern Dashboard UI
+                  </h3>
+                  <p className="text-sm text-neutral-600 dark:text-neutral-400">
+                    React · TypeScript · Tailwind CSS · Recharts · Framer Motion
+                  </p>
+                </div>
+              </div>
+              <ul className="space-y-1.5 print:space-y-1 text-sm print:text-xs text-neutral-700 dark:text-neutral-300 ml-4 print:ml-3 list-disc">
+                <li>
+                  Built responsive dashboard with real-time data visualization, interactive charts, and dark mode support
+                </li>
+                <li>
+                  Implemented advanced filtering, search functionality, and smooth animations using Framer Motion
+                </li>
+                <li>
+                  Achieved 92+ Lighthouse performance score through code optimization and efficient state management
                 </li>
               </ul>
             </div>
           </div>
         </section>
 
-        {/* Education & Certifications */}
-        <section className="mb-8 print:mb-3 print:pb-1">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 print:gap-4">
-            <div>
-              <h2 className="text-lg font-bold uppercase tracking-wide mb-4 print:text-base print:mb-2 print:pb-0.5 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
-                Education
-              </h2>
-              <div>
-                <h3 className="font-bold text-base text-neutral-900 dark:text-neutral-100">SUNY Brockport</h3>
-                <p className="text-sm text-neutral-700 dark:text-neutral-300">
-                  Bachelor of Science, Computer Science
-                  <br />
-                  Concentration: Software Development
-                  <br />
-                  GPA: 3.52 / 4.0
-                </p>
-                <p className="text-sm text-neutral-600 dark:text-neutral-400 mt-1">2017 – Present</p>
-              </div>
-            </div>
-
-            <div>
-              <h2 className="text-lg font-bold uppercase tracking-wide mb-4 print:text-base print:mb-2 print:pb-0.5 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
-                Certifications
-              </h2>
-              <div className="space-y-3">
-                <div>
-                  <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">freeCodeCamp</h3>
-                  <p className="text-sm text-neutral-700 dark:text-neutral-300">
-                    JavaScript Algorithms and Data Structures
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-semibold text-sm text-neutral-900 dark:text-neutral-100">freeCodeCamp</h3>
-                  <p className="text-sm text-neutral-700 dark:text-neutral-300">Responsive Web Design</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Additional Skills & Keywords for ATS */}
+        {/* Core Competencies & Keywords for ATS */}
         <section className="print:mb-2 print:pb-1">
           <h2 className="text-lg font-bold uppercase tracking-wide mb-3 print:text-base print:mb-1.5 print:pb-0.5 text-neutral-900 dark:text-neutral-100 border-b-2 border-neutral-900 dark:border-neutral-100 pb-1">
-            Additional Skills
+            Core Competencies
           </h2>
           <div className="flex flex-wrap gap-2 print:gap-1.5 text-xs print:text-[10px]">
             {[
-              'Full-Stack Development',
-              'AI Integration',
-              'API Development',
-              'RESTful APIs',
-              'Responsive Design',
-              'Performance Optimization',
-              'SEO',
-              'Git Version Control',
               'Agile Methodologies',
-              'Problem Solving',
+              'RESTful API Design',
+              'Database Design',
+              'Performance Optimization',
+              'SEO & Web Vitals',
+              'Responsive Design',
+              'Version Control (Git)',
+              'CI/CD Pipelines',
               'Code Review',
               'Technical Documentation',
+              'Problem Solving',
               'Cross-Platform Development',
-              'Database Design',
-              'Cloud Deployment',
-              'CI/CD',
-              'Test-Driven Development',
             ].map((skill) => (
               <span
                 key={skill}

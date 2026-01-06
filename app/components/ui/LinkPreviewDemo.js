@@ -15,7 +15,7 @@ export function InlinePreview({
       url={url}
       imageSrc={imageSrc}
       isStatic={isStatic}
-      className={`inline-block align-baseline font-semibold bg-clip-text text-transparent ${className}`}
+      className={`inline-block align-baseline font-semibold text-white px-1 py-0 rounded ml-1 ${className}`}
     >
       {children}
     </LinkPreview>

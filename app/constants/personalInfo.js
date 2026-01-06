@@ -8,7 +8,7 @@ export const PERSONAL_INFO = {
   social: {
     github: 'https://github.com/andychan93330',
     linkedin: 'https://linkedin.com/in/andy-chan',
-    resume: '/api/download-cv',
+    resume: '/api/download-resume',
   },
 };
 

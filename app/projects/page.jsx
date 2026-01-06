@@ -11,7 +11,6 @@ const projects = [
     title: 'AI Chat Assistant',
     description: 'Intelligent chatbot built with OpenAI API, Next.js, and LangChain for context-aware conversations',
     longDescription: 'An advanced AI chatbot application that leverages OpenAI GPT models with LangChain for enhanced context management. Features include multi-turn conversations, custom knowledge base integration, streaming responses, conversation history, and export functionality.',
-    image: '/ai-chatbot.png',
     category: 'ai',
     technologies: ['OpenAI API', 'Next.js', 'LangChain', 'TypeScript', 'Tailwind CSS', 'Vercel AI SDK'],
     github: 'https://github.com/vercel/ai-chatbot',
@@ -23,7 +22,6 @@ const projects = [
     title: 'AI Image Recognition',
     description: 'Deep learning image classification system using TensorFlow and modern web technologies',
     longDescription: 'An AI-powered image recognition system that uses deep learning models for accurate image classification. Features include real-time image processing, batch upload, confidence scoring, and model fine-tuning capabilities.',
-    image: '/ai-image-recognition.png',
     category: 'ai',
     technologies: ['Python', 'TensorFlow', 'Next.js', 'FastAPI', 'OpenCV', 'NumPy', 'Pillow'],
     github: 'https://github.com/ageitgey/face_recognition',
@@ -35,7 +33,6 @@ const projects = [
     title: 'AI Content Generator',
     description: 'Advanced content generation platform with OpenAI GPT models, prompt engineering, and workflow automation',
     longDescription: 'A sophisticated AI-powered content generation platform that creates high-quality articles, blog posts, and marketing copy. Features include advanced prompt engineering, customizable templates, batch processing, and intelligent content optimization.',
-    image: '/ai-content-generator.png',
     category: 'ai',
     technologies: ['OpenAI API', 'Next.js', 'FastAPI', 'Python', 'LLM Integration', 'Prompt Engineering'],
     github: 'https://github.com/vercel/ai',
@@ -48,7 +45,6 @@ const projects = [
     title: 'RealWorld Full-Stack App',
     description: 'Production-ready full-stack application demonstrating best practices with Next.js and Node.js',
     longDescription: 'A full-stack application following the RealWorld specification, showcasing best practices in modern web development. Features include user authentication, CRUD operations, real-time updates, pagination, and comprehensive error handling.',
-    image: '/realworld-app.png',
     category: 'fullstack',
     technologies: ['Next.js', 'Node.js', 'Express.js', 'PostgreSQL', 'TypeScript', 'Prisma', 'JWT'],
     github: 'https://github.com/gothinkster/realworld',
@@ -60,7 +56,6 @@ const projects = [
     title: 'E-Commerce Platform',
     description: 'Full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard',
     longDescription: 'A comprehensive full-stack e-commerce platform built with Next.js, Node.js, and PostgreSQL. Features include user authentication, shopping cart, payment integration with Stripe, real-time inventory management, order tracking, and admin dashboard.',
-    image: '/ecommerce-platform.png',
     category: 'fullstack',
     technologies: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe', 'TypeScript', 'Express.js', 'Tailwind CSS', 'Prisma'],
     github: 'https://github.com/vercel/commerce',
@@ -72,7 +67,6 @@ const projects = [
     title: 'Social Media Platform',
     description: 'Full-stack social media application with real-time messaging, posts, and user interactions',
     longDescription: 'A complete social media platform built with Next.js and Node.js. Features include user profiles, posts, comments, likes, real-time messaging, notifications, and content moderation. Demonstrates full-stack development with modern technologies.',
-    image: '/social-media-platform.png',
     category: 'fullstack',
     technologies: ['Next.js', 'Node.js', 'MongoDB', 'Socket.io', 'TypeScript', 'Express.js', 'JWT'],
     github: 'https://github.com/gothinkster/realworld',
@@ -85,7 +79,6 @@ const projects = [
     title: 'Modern Dashboard UI',
     description: 'Beautiful React dashboard with TypeScript, Tailwind CSS, and advanced data visualization',
     longDescription: 'A modern, responsive dashboard application built with React and TypeScript. Features include real-time data visualization, interactive charts, dark mode support, advanced filtering, and smooth animations.',
-    image: '/dashboard-ui.png',
     category: 'frontend',
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Recharts', 'Zustand', 'React Query', 'Framer Motion'],
     github: 'https://github.com/bchiang7/v4',
@@ -97,7 +90,6 @@ const projects = [
     title: 'Task Management Dashboard',
     description: 'Modern task management application with real-time collaboration, drag-and-drop, and filtering',
     longDescription: 'A feature-rich task management application built with React and TypeScript. Features include drag-and-drop task organization, real-time collaboration using WebSockets, advanced filtering and search, calendar integration, and beautiful UI.',
-    image: '/task-manager.png',
     category: 'frontend',
     technologies: ['React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Zustand', 'React Query', 'WebSockets'],
     github: 'https://github.com/vercel/next.js',
@@ -109,7 +101,6 @@ const projects = [
     title: 'Portfolio Website',
     description: 'Modern portfolio website with animations, dark mode, and responsive design',
     longDescription: 'A stunning portfolio website built with Next.js and Framer Motion. Features include smooth page transitions, interactive animations, dark mode support, responsive design, and optimized performance.',
-    image: '/portfolio-website.png',
     category: 'frontend',
     technologies: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'Framer Motion', 'Vercel'],
     github: 'https://github.com/bchiang7/v4',
@@ -122,7 +113,6 @@ const projects = [
     title: 'Node.js REST API Boilerplate',
     description: 'Production-ready Express.js API with authentication, validation, error handling, and testing',
     longDescription: 'A comprehensive Node.js RESTful API boilerplate built with Express.js. Features include JWT authentication, request validation, error handling middleware, rate limiting, API documentation with Swagger, database migrations, and comprehensive test coverage.',
-    image: '/api-boilerplate.png',
     category: 'backend',
     technologies: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'Jest', 'Swagger', 'Docker', 'ESLint'],
     github: 'https://github.com/hagopj13/node-express-boilerplate',
@@ -134,7 +124,6 @@ const projects = [
     title: 'GraphQL API Server',
     description: 'Scalable GraphQL API with Apollo Server, authentication, and real-time subscriptions',
     longDescription: 'A production-ready GraphQL API server built with Apollo Server and Node.js. Features include type-safe schema, authentication and authorization, real-time subscriptions, data loaders for optimization, and comprehensive error handling.',
-    image: '/graphql-api.png',
     category: 'backend',
     technologies: ['Node.js', 'Apollo Server', 'GraphQL', 'PostgreSQL', 'TypeScript', 'JWT', 'WebSockets'],
     github: 'https://github.com/apollographql/apollo-server',
@@ -146,7 +135,6 @@ const projects = [
     title: 'Microservices API Gateway',
     description: 'API Gateway for microservices architecture with load balancing and service discovery',
     longDescription: 'An API Gateway solution for microservices architecture built with Node.js. Features include request routing, load balancing, service discovery, rate limiting, authentication, request/response transformation, and monitoring.',
-    image: '/api-gateway.png',
     category: 'backend',
     technologies: ['Node.js', 'Express.js', 'Redis', 'Docker', 'Kubernetes', 'Nginx', 'Prometheus'],
     github: 'https://github.com/expressjs/express',
@@ -159,7 +147,6 @@ const projects = [
     title: 'React Native Weather App',
     description: 'Cross-platform weather application with location services and beautiful UI animations',
     longDescription: 'A feature-rich weather application built with React Native and Expo. Features include location-based weather data, 7-day forecasts, weather maps, push notifications, offline support, and smooth animations.',
-    image: '/weather-app.png',
     category: 'mobile',
     technologies: ['React Native', 'Expo', 'TypeScript', 'React Navigation', 'AsyncStorage', 'Location Services'],
     github: 'https://github.com/ajayns/react-weather-app',
@@ -171,7 +158,6 @@ const projects = [
     title: 'Fitness Tracking App',
     description: 'Cross-platform mobile app for workout tracking, progress analytics, and social features',
     longDescription: 'A comprehensive fitness tracking mobile application built with React Native and Expo. Features include workout logging, progress tracking with charts and analytics, social features for sharing achievements, workout plans, and offline mode support.',
-    image: '/fitness-app.png',
     category: 'mobile',
     technologies: ['React Native', 'Expo', 'Firebase', 'Reanimated', 'AsyncStorage', 'Charts'],
     github: 'https://github.com/expo/expo',
@@ -183,7 +169,6 @@ const projects = [
     title: 'Task Manager Mobile',
     description: 'Productive task management app with offline sync, notifications, and team collaboration',
     longDescription: 'A feature-rich task management mobile application built with React Native. Features include task organization, offline synchronization, push notifications, team collaboration, calendar integration, and beautiful UI with smooth animations.',
-    image: '/task-manager-mobile.png',
     category: 'mobile',
     technologies: ['React Native', 'Expo', 'TypeScript', 'Firebase', 'React Navigation', 'AsyncStorage'],
     github: 'https://github.com/react-native-community',
@@ -204,6 +189,40 @@ const categories = [
 const getCategoryIcon = (category) => {
   const categoryObj = categories.find(cat => cat.id === category);
   return categoryObj ? categoryObj.icon : FiCode;
+};
+
+const getImageUrl = (category, id) => {
+  // 카테고리별 적절한 Unsplash 이미지 URL
+  const categoryImages = {
+    'ai': [
+      'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=200&fit=crop', // AI/Robot
+      'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&h=200&fit=crop', // AI Brain
+      'https://images.unsplash.com/photo-1555255707-c07966088b7b?w=400&h=200&fit=crop', // AI Circuit
+    ],
+    'fullstack': [
+      'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=400&h=200&fit=crop', // Code on screen
+      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400&h=200&fit=crop', // Developer workspace
+      'https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=400&h=200&fit=crop', // Programming
+    ],
+    'frontend': [
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=200&fit=crop', // Web design
+      'https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?w=400&h=200&fit=crop', // UI/UX design
+      'https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=400&h=200&fit=crop', // Design tools
+    ],
+    'backend': [
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&h=200&fit=crop', // Server room
+      'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=400&h=200&fit=crop', // Database/Server
+      'https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=200&fit=crop', // API/Backend
+    ],
+    'mobile': [
+      'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=400&h=200&fit=crop', // Mobile app
+      'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=400&h=200&fit=crop', // Smartphone
+      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=200&fit=crop', // Mobile development
+    ],
+  };
+  
+  const images = categoryImages[category] || categoryImages.fullstack;
+  return images[(id - 1) % images.length];
 };
 
 
@@ -263,16 +282,48 @@ export default function ProjectsPage() {
                 key={project.id}
                 className="group relative bg-white dark:bg-neutral-900 rounded-xl border border-neutral-200 dark:border-neutral-800 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
               >
+                {/* Project Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={getImageUrl(project.category, project.id)}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    onError={(e) => {
+                      // 이미지 로드 실패시 그라데이션 배경으로 대체
+                      e.target.style.display = 'none';
+                      e.target.nextSibling.style.display = 'flex';
+                    }}
+                  />
+                  <div 
+                    className="w-full h-full absolute inset-0 hidden items-center justify-center text-white font-bold text-xl"
+                    style={{ 
+                      background: {
+                        'ai': 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
+                        'fullstack': 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
+                        'frontend': 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+                        'backend': 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+                        'mobile': 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+                      }[project.category] || 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)'
+                    }}
+                  >
+                    <CategoryIcon className="text-4xl opacity-80" />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+                  {project.featured && (
+                    <div className="absolute top-3 right-3 px-2 py-1 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-semibold backdrop-blur-sm">
+                      Featured
+                    </div>
+                  )}
+                  <div className="absolute bottom-3 left-3">
+                    <CategoryIcon className="text-2xl text-white/80" />
+                  </div>
+                </div>
+
                 {/* Content */}
                 <div className="p-4">
-                  {/* Category Icon & Featured Badge */}
+                  {/* Category Icon */}
                   <div className="flex items-center justify-between mb-2">
                     <CategoryIcon className="text-base text-blue-600 dark:text-blue-400" />
-                    {project.featured && (
-                      <div className="px-1.5 py-0.5 rounded-full bg-gradient-to-r from-blue-600 to-purple-600 text-white text-[10px] font-semibold">
-                        Featured
-                      </div>
-                    )}
                   </div>
                   
                   <h3 className="text-base font-bold text-neutral-900 dark:text-neutral-100 mb-1.5 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-1">
@@ -301,19 +352,8 @@ export default function ProjectsPage() {
                   </div>
 
                   {/* Links */}
-                  <div className="flex items-center gap-2 pt-3 border-t border-neutral-200 dark:border-neutral-800">
-                    {project.github && (
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-neutral-200 dark:hover:bg-neutral-700 transition-colors text-xs font-medium"
-                      >
-                        <FiGithub className="text-sm" />
-                        Code
-                      </a>
-                    )}
-                    {project.demo && (
+                  {project.demo && (
+                    <div className="flex items-center gap-2 pt-3 border-t border-neutral-200 dark:border-neutral-800">
                       <a
                         href={project.demo}
                         target="_blank"
@@ -321,10 +361,10 @@ export default function ProjectsPage() {
                         className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-gradient-to-r from-blue-600 to-purple-600 text-white hover:from-blue-500 hover:to-purple-500 transition-all text-xs font-semibold shadow-md hover:shadow-lg flex-1 justify-center"
                       >
                         <FiExternalLink className="text-sm" />
-                        Demo
+                        View Demo
                       </a>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
               </div>
             );

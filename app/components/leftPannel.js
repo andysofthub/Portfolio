@@ -20,7 +20,6 @@ import {
 import { PERSONAL_INFO } from "../constants/personalInfo";
 
 import { SplineErrorFilter } from "./SplineErrorFilter"; // Import the improved filter
-import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export default function LeftPannel() {
   const { name, email, social } = PERSONAL_INFO;
@@ -47,19 +46,11 @@ export default function LeftPannel() {
         {/* Name - below robot image */}
         <div className="mb-3 md:mb-4">
           <Link href="/">
-            <h1 className="font-bold text-lg sm:text-xl md:text-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent text-center">
+              <h1 className="font-bold text-lg sm:text-xl md:text-2xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent text-center">
               {name}
-            </h1>
-          </Link>
-        </div>
-
-        {/* Theme and Language Switcher */}
-        <div className="mb-3 md:mb-4 flex items-center justify-center gap-2">
-          <div className="p-1.5 rounded-full bg-white/70 dark:bg-black/30 border border-neutral-300/50 dark:border-neutral-600/50 shadow-sm hover:shadow-md transition-all duration-200">
-            <ThemeChanger />
+              </h1>
+            </Link>
           </div>
-          <LanguageSwitcher />
-        </div>
 
         {/* Main Content Container */}
         <div className="mt-3 md:mt-4 flex flex-col items-center w-full max-w-xs">
@@ -97,7 +88,7 @@ export default function LeftPannel() {
               <span>LinkedIn</span>
             </a>
             <a
-              href={process.env.NODE_ENV === 'development' ? '/api/download-cv' : '/cv.pdf'}
+              href={process.env.NODE_ENV === 'development' ? '/api/download-resume' : '/resume.pdf'}
               download={process.env.NODE_ENV === 'production'}
               className="flex items-center gap-2 px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-md border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition w-full text-neutral-900 dark:text-neutral-100"
             >
@@ -155,14 +146,24 @@ export default function LeftPannel() {
               Certifications
             </h4>
             <div className="grid grid-cols-1 gap-1.5">
-              <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900">
+              <a 
+                href="/FreeCodeCamp Certified.png" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors cursor-pointer"
+              >
                 <span className="text-green-500">📜</span>
-                <span className="text-[12px] font-medium text-neutral-900 dark:text-neutral-100">FreeCodeCamp Certified</span>
-              </div>
-              <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900">
+                <span className="text-[12px] font-medium text-neutral-900 dark:text-neutral-100 hover:text-blue-600 dark:hover:text-blue-400">FreeCodeCamp Certified</span>
+              </a>
+              <a 
+                href="/AWS Certified.png" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors cursor-pointer"
+              >
                 <span className="text-blue-500">☁️</span>
-                <span className="text-[12px] font-medium text-neutral-900 dark:text-neutral-100">AWS Certified</span>
-              </div>
+                <span className="text-[12px] font-medium text-neutral-900 dark:text-neutral-100 hover:text-blue-600 dark:hover:text-blue-400">AWS Certified</span>
+              </a>
               <div className="flex items-center gap-2 px-2.5 py-1.5 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900">
                 <span className="text-red-500">🎓</span>
                 <span className="text-[12px] font-medium text-neutral-900 dark:text-neutral-100">CS Degree</span>

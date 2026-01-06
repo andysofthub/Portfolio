@@ -3,6 +3,8 @@
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import clsx from 'clsx';
+import { ThemeChanger } from '../utils.js/toggleTheme';
+import { LanguageSwitcher } from './LanguageSwitcher';
 
 // Filter nav items based on environment
 const getNavItems = () => {
@@ -31,33 +33,47 @@ export default function Nav() {
   return (
     <nav className="sticky top-0 z-40 w-full backdrop-blur-lg bg-white/90 dark:bg-neutral-950/90 border-b border-neutral-200 dark:border-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-center py-4">
-          <div className="relative inline-flex items-center gap-1 bg-neutral-100 dark:bg-neutral-900 p-1.5 rounded-2xl border border-neutral-200 dark:border-neutral-800 shadow-inner">
-            {navItems.map((item, index) => {
-              const isActive = pathname === item.path;
+        <div className="flex items-center justify-between py-4">
+          {/* Navigation Tabs - Center */}
+          <div className="flex-1 flex justify-center">
+            <div className="relative inline-flex items-center gap-1 bg-neutral-100 dark:bg-neutral-900 p-1.5 rounded-2xl border border-neutral-200 dark:border-neutral-800 shadow-inner">
+              {navItems.map((item, index) => {
+                const isActive = pathname === item.path;
 
-              return (
-                <button
-                  key={item.name}
-                  onClick={() => router.push(item.path)}
-                  onMouseEnter={() => setHovered(index)}
-                  onMouseLeave={() => setHovered(null)}
-                  className={clsx(
-                    'relative px-5 py-2.5 rounded-xl text-sm md:text-base font-semibold transition-all duration-300',
-                    'min-w-[80px] md:min-w-[100px]',
-                    isActive
-                      ? 'text-white'
-                      : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200'
-                  )}
-                >
-                  {isActive && (
-                    <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 shadow-lg shadow-purple-500/30" />
-                  )}
-                  <span className="relative z-10">{item.name}</span>
-                </button>
-              );
-            })}
+                return (
+                  <button
+                    key={item.name}
+                    onClick={() => router.push(item.path)}
+                    onMouseEnter={() => setHovered(index)}
+                    onMouseLeave={() => setHovered(null)}
+                    className={clsx(
+                      'relative px-5 py-2.5 rounded-xl text-sm md:text-base font-semibold transition-all duration-300',
+                      'min-w-[80px] md:min-w-[100px]',
+                      isActive
+                        ? 'text-white'
+                        : 'text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200'
+                    )}
+                  >
+                    {isActive && (
+                      <span className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 shadow-lg shadow-purple-500/30" />
+                    )}
+                    <span className="relative z-10">{item.name}</span>
+                  </button>
+                );
+              })}
+            </div>
           </div>
+
+          {/* Theme and Language Switcher - Right (Development only) */}
+          {process.env.NODE_ENV === 'development' && (
+            <div className="flex items-center gap-2.5">
+              <div className="p-1.5 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors">
+                <ThemeChanger />
+              </div>
+              <div className="h-6 w-px bg-neutral-300 dark:bg-neutral-700"></div>
+              <LanguageSwitcher />
+            </div>
+          )}
         </div>
       </div>
     </nav>

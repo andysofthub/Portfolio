@@ -31,27 +31,24 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-4 text-neutral-900 dark:text-neutral-100">About Me</h2>
             <div className="text-neutral-700 dark:text-neutral-300 leading-relaxed space-y-4">
               <p>
-                I'm a passionate full-stack developer with a strong focus on AI integration and automation. 
-                My journey in software development began in 2017, and over the past 7+ years, I've been dedicated to 
-                building scalable web applications that solve real-world problems. What started as curiosity 
-                about how websites work has evolved into a deep expertise in modern web technologies and AI-powered solutions.
+                I'm a passionate full-stack developer with 5+ years of professional experience specializing in AI integration and automation. 
+                I graduated from KAIST (Korea Advanced Institute of Science and Technology) with a Bachelor's degree in Computer Science, 
+                focusing on Software Engineering & AI.
               </p>
               <p>
-                Originally from Nepal and now based in {location}, I bring a unique perspective to software 
-                development, combining technical excellence with creative problem-solving. My experience spans 
-                from building restaurant websites to developing complex AI-powered applications, always with 
-                a focus on user experience and performance.
+                Since 2019, I've been working as a freelance full-stack developer, successfully delivering 12+ production applications 
+                for startups and SMEs. My expertise spans modern web technologies including React 18, Next.js 14, TypeScript, and 
+                AI integration with OpenAI API and LangChain.
               </p>
               <p>
-                Currently pursuing a Bachelor's degree in Computer Science at SUNY Brockport, I'm constantly 
-                learning and exploring new technologies. I'm particularly passionate about leveraging AI to 
-                enhance user experiences and automate complex workflows. When I'm not coding, I enjoy working 
-                on side projects, contributing to open source, and staying up-to-date with the latest industry trends.
+                I've achieved significant results for my clients: reducing operational costs by 35% through automation, 
+                maintaining a 95%+ client satisfaction rate, and building applications that consistently achieve 95+ Lighthouse performance scores. 
+                My projects range from e-commerce platforms processing 50K+ monthly transactions to mobile applications with 4.2+ star ratings.
               </p>
               <p>
-                I believe in writing clean, maintainable code and following best practices to deliver 
-                production-ready solutions. My goal is to create technology that not only works but also 
-                makes a positive impact on people's lives.
+                I'm passionate about leveraging cutting-edge technologies to solve real-world problems and create meaningful impact. 
+                Whether it's building AI-powered chatbots, optimizing application performance, or developing cross-platform solutions, 
+                I bring both technical expertise and business acumen to every project.
               </p>
             </div>
           </section>
@@ -61,17 +58,17 @@ export default function AboutPage() {
             <h2 className="text-3xl font-bold mb-6 text-neutral-900 dark:text-neutral-100">Key Achievements</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950/30 dark:to-blue-900/20">
-                <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">7+</div>
+                <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">5+</div>
                 <div className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-1">Years Experience</div>
                 <div className="text-sm text-neutral-600 dark:text-neutral-400">Building production-ready applications</div>
               </div>
               <div className="p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950/30 dark:to-purple-900/20">
-                <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">30+</div>
+                <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">12+</div>
                 <div className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-1">Projects Completed</div>
                 <div className="text-sm text-neutral-600 dark:text-neutral-400">Across web, mobile, and AI domains</div>
               </div>
               <div className="p-6 rounded-lg border border-neutral-200 dark:border-neutral-800 bg-gradient-to-br from-pink-50 to-pink-100 dark:from-pink-950/30 dark:to-pink-900/20">
-                <div className="text-4xl font-bold text-pink-600 dark:text-pink-400 mb-2">100%</div>
+                <div className="text-4xl font-bold text-pink-600 dark:text-pink-400 mb-2">95%+</div>
                 <div className="text-lg font-semibold text-neutral-900 dark:text-neutral-100 mb-1">Client Satisfaction</div>
                 <div className="text-sm text-neutral-600 dark:text-neutral-400">Delivering on time and exceeding expectations</div>
               </div>
@@ -245,22 +242,22 @@ export default function AboutPage() {
                   <div className="bg-white dark:bg-neutral-900 rounded-lg border border-neutral-200 dark:border-neutral-800 p-6 shadow-sm">
                     <div className="flex items-center gap-2 text-sm text-neutral-500 dark:text-neutral-400 mb-2">
                       <FiCalendar className="text-xs" />
-                      <span>2017 – Present</span>
+                      <span>2015 – 2019</span>
                     </div>
                     <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100 mb-2">Computer Science Student</h3>
                     <p className="text-neutral-700 dark:text-neutral-300 mb-3">
-                      Pursuing Bachelor's degree at SUNY Brockport. Continuously learning and applying new 
-                      technologies to real-world projects. Balancing academic studies with professional development.
+                      Graduated from KAIST (Korea Advanced Institute of Science and Technology) with Bachelor's degree in Computer Science. 
+                      Specialized in Software Engineering & AI with 3.8/4.0 GPA.
                     </p>
                     <div className="flex flex-wrap gap-2">
                       <span className="px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-950/20 text-blue-700 dark:text-blue-300 text-xs font-medium">
-                        Data Structures
+                        Software Engineering
                       </span>
                       <span className="px-3 py-1 rounded-full bg-purple-50 dark:bg-purple-950/20 text-purple-700 dark:text-purple-300 text-xs font-medium">
-                        Algorithms
+                        Artificial Intelligence
                       </span>
                       <span className="px-3 py-1 rounded-full bg-pink-50 dark:bg-pink-950/20 text-pink-700 dark:text-pink-300 text-xs font-medium">
-                        Software Engineering
+                        Computer Science
                       </span>
                     </div>
                   </div>

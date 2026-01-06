@@ -35,12 +35,11 @@ export function LanguageSwitcher() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 rounded-lg border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-900 hover:bg-neutral-50 dark:hover:bg-neutral-800 transition-colors text-sm"
+        className="flex items-center gap-1.5 px-2.5 py-2 rounded-lg hover:bg-neutral-100 dark:hover:bg-neutral-800 transition-colors text-sm"
         aria-label="Change language"
       >
-        <FiGlobe className="text-base" />
-        <span className="text-lg">{currentLanguage.flag}</span>
-        <span className="hidden sm:inline">{currentLanguage.name}</span>
+        <FiGlobe className="text-base text-neutral-600 dark:text-neutral-400" />
+        <span className="text-base">{currentLanguage.flag}</span>
       </button>
 
       {isOpen && (
