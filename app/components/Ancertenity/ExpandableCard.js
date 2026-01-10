@@ -228,7 +228,7 @@ const cards = [
     title: "ArrayWall",
     src: "/arraywall.png",
     ctaText: "View",
-    ctaLink: "https://arraywall.yubrajkhatri.com.np/",
+    ctaLink: "https://portfolio-andy-soft.vercel.app/arraywall",
     content: () => {
       return (
         <p>
@@ -254,7 +254,7 @@ const cards = [
     title: "YmsHub",
     src: "/ymshub.png",
     ctaText: "view",
-    ctaLink: "https://ymshub.yubrajkhatri.com.np/",
+    ctaLink: "https://portfolio-andy-soft.vercel.app/ymshub",
     content: () => {
       return (
         (

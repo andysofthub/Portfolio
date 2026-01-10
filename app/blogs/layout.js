@@ -1,11 +1,13 @@
+import { PERSONAL_INFO } from '../constants/personalInfo';
+
 export const metadata = {
-  title: "Blogs | Yubraj Khatri",
-  description: "Read insightful blogs by Yubraj Khatri on software development, technology trends, and programming tutorials.",
-  keywords: "blog, programming, software development, technology, tutorials, Yubraj Khatri",
+  title: `Blogs | ${PERSONAL_INFO.name}`,
+  description: `Read insightful blogs by ${PERSONAL_INFO.name} on software development, technology trends, and programming tutorials.`,
+  keywords: `blog, programming, software development, technology, tutorials, ${PERSONAL_INFO.name}`,
   openGraph: {
-    title: "Blogs | Yubraj Khatri",
-    description: "Read insightful blogs by Yubraj Khatri on software development, technology trends, and programming tutorials.",
-    url: "https://yubrajkhatri.com.np/blogs",
+    title: `Blogs | ${PERSONAL_INFO.name}`,
+    description: `Read insightful blogs by ${PERSONAL_INFO.name} on software development, technology trends, and programming tutorials.`,
+    url: `${PERSONAL_INFO.social.portfolio}/blogs`,
   }
 };
 

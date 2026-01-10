@@ -29,7 +29,7 @@ export const metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://yubrajkhatri.com.np',
+    url: PERSONAL_INFO.social.portfolio,
     siteName: `${PERSONAL_INFO.name} - Portfolio`,
     title: `${PERSONAL_INFO.name} - ${PERSONAL_INFO.title}`,
     description: `${PERSONAL_INFO.title} specializing in full-stack development, AI integration, and automation.`,

@@ -1,11 +1,13 @@
+import { PERSONAL_INFO } from '../constants/personalInfo';
+
 export const metadata = {
-  title: "Testimonials | Yubraj Khatri",
-  description: "Read what clients, colleagues, and collaborators say about working with Yubraj Khatri on software development projects.",
-  keywords: "testimonials, reviews, recommendations, client feedback, software developer, Yubraj Khatri",
+  title: `Testimonials | ${PERSONAL_INFO.name}`,
+  description: `Read what clients, colleagues, and collaborators say about working with ${PERSONAL_INFO.name} on software development projects.`,
+  keywords: `testimonials, reviews, recommendations, client feedback, software developer, ${PERSONAL_INFO.name}`,
   openGraph: {
-    title: "Testimonials | Yubraj Khatri",
-    description: "Read what clients, colleagues, and collaborators say about working with Yubraj Khatri.",
-    url: "https://yubrajkhatri.com.np/testimonials",
+    title: `Testimonials | ${PERSONAL_INFO.name}`,
+    description: `Read what clients, colleagues, and collaborators say about working with ${PERSONAL_INFO.name}.`,
+    url: `${PERSONAL_INFO.social.portfolio}/testimonials`,
   }
 };
 

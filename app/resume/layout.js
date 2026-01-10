@@ -9,7 +9,7 @@ export const metadata = {
   openGraph: {
     title: `Resume | ${PERSONAL_INFO.name}`,
     description: `Resume for ${PERSONAL_INFO.name} - Software Developer.`,
-    url: "https://yubrajkhatri.com.np/resume",
+    url: `${PERSONAL_INFO.social.portfolio}/resume`,
   },
 };
 

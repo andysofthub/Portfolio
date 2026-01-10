@@ -1,11 +1,13 @@
+import { PERSONAL_INFO } from '../constants/personalInfo';
+
 export const metadata = {
-  title: "Timeline | Yubraj Khatri",
-  description: "Explore Yubraj Khatri's journey from first line of code to current projects and future goals in software development.",
-  keywords: "timeline, journey, career, software development, milestones, programming journey, Yubraj Khatri",
+  title: `Timeline | ${PERSONAL_INFO.name}`,
+  description: `Explore ${PERSONAL_INFO.name}'s journey from first line of code to current projects and future goals in software development.`,
+  keywords: `timeline, journey, career, software development, milestones, programming journey, ${PERSONAL_INFO.name}`,
   openGraph: {
-    title: "Timeline | Yubraj Khatri",
-    description: "Explore Yubraj Khatri's journey from first line of code to current projects and future goals.",
-    url: "https://yubrajkhatri.com.np/timeline",
+    title: `Timeline | ${PERSONAL_INFO.name}`,
+    description: `Explore ${PERSONAL_INFO.name}'s journey from first line of code to current projects and future goals.`,
+    url: `${PERSONAL_INFO.social.portfolio}/timeline`,
   }
 };
 

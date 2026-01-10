@@ -7,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: `About | ${PERSONAL_INFO.name}`,
     description: `${PERSONAL_INFO.title} specializing in full-stack development, AI integration, and automation.`,
-    url: `https://yubrajkhatri.com.np/about`,
+    url: `${PERSONAL_INFO.social.portfolio}/about`,
     type: 'website',
     images: [
       {

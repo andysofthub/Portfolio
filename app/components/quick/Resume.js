@@ -1,5 +1,6 @@
 // components/resume.js
 import React from 'react';
+import { PERSONAL_INFO } from '../../constants/personalInfo';
 
 const Resume = () => {
   return (
@@ -7,19 +8,19 @@ const Resume = () => {
       <div className="max-w-4xl mx-auto bg-[#262626] shadow-md p-8 rounded-lg">
         {/* Header Section */}
         <header className="mb-8 border-b border-[#3c3c3c] pb-4">
-          <h1 className="text-4xl font-bold font-serif tracking-wide text-[#e4e4e4]">Yubraj Khatri</h1>
-          <p className="text-lg italic text-[#b3b3b3]">Software Developer | Problem Solver | Learner</p>
+          <h1 className="text-4xl font-bold font-serif tracking-wide text-[#e4e4e4]">{PERSONAL_INFO.name}</h1>
+          <p className="text-lg italic text-[#b3b3b3]">{PERSONAL_INFO.title}</p>
         </header>
 
         {/* Contact Info */}
         <section className="mb-8">
           <h2 className="text-xl font-bold uppercase mb-2 text-[#e8e2d1]">Contact</h2>
-          <p>Email: <a href="mailto:yubrajkhatri977@gmail.com" className="text-[#c8a27b]">yubrajkhatri977@gmail.com</a></p>
-          <p>Phone: +585-957-2805</p>
+          <p>Email: <a href={`mailto:${PERSONAL_INFO.email}`} className="text-[#c8a27b]">{PERSONAL_INFO.email}</a></p>
+          <p>Phone: {PERSONAL_INFO.phone}</p>
           <p>
-            <a href="https://yubrajkhatri.com.np/" target="_blank" className="underline text-[#c8a27b]">Portfolio</a> |
-            <a href="https://github.com/Yubraj977" target="_blank" className="underline text-[#c8a27b]"> GitHub</a> |
-            <a href="https://linkedin.com/in/yubraj-khatri-155786243" target="_blank" className="underline text-[#c8a27b]"> LinkedIn</a>
+            <a href={PERSONAL_INFO.social.portfolio} target="_blank" className="underline text-[#c8a27b]">Portfolio</a> |
+            <a href={PERSONAL_INFO.social.github} target="_blank" className="underline text-[#c8a27b]"> GitHub</a> |
+            <a href={PERSONAL_INFO.social.linkedin} target="_blank" className="underline text-[#c8a27b]"> LinkedIn</a>
           </p>
         </section>
 
@@ -51,7 +52,7 @@ const Resume = () => {
           <div>
             <p>
               <strong>Movie Downloading Site (YmsHub)</strong> -{' '}
-              <a href="https://ymshub.yubrajkhatri.com.np/" target="_blank" className="underline text-[#c8a27b]">LINK</a>
+              <a href="https://portfolio-andy-soft.vercel.app/ymshub" target="_blank" className="underline text-[#c8a27b]">LINK</a>
             </p>
             <p>Technologies: MERN, Redux, Firebase, MongoDB</p>
             <p>Description: Fully functional movie downloading site with state management and CRUD operations.</p>

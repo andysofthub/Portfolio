@@ -12,7 +12,7 @@ export function StructuredData() {
       '@type': 'PostalAddress',
       addressLocality: PERSONAL_INFO.location,
     },
-    url: 'https://yubrajkhatri.com.np',
+    url: PERSONAL_INFO.social.portfolio,
     sameAs: [
       PERSONAL_INFO.social.github,
       PERSONAL_INFO.social.linkedin,
@@ -33,7 +33,7 @@ export function StructuredData() {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
     name: `${PERSONAL_INFO.name} - Portfolio`,
-    url: 'https://yubrajkhatri.com.np',
+    url: PERSONAL_INFO.social.portfolio,
     author: {
       '@type': 'Person',
       name: PERSONAL_INFO.name,

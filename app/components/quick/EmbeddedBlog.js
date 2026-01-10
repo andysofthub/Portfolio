@@ -15,7 +15,7 @@ function EmbeddedBlog() {
       {/* Embedded Content */}
       <iframe
         ref={iframeRef}
-        src="https://blog.yubrajkhatri.com.np/"
+        src="https://portfolio-andy-soft.vercel.app/blog/"
         width="100%"
         height="1000"
         style={{

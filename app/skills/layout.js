@@ -7,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: `Skills & Expertise | ${PERSONAL_INFO.name}`,
     description: `Technical skills and expertise in full-stack development, AI integration, and modern web technologies.`,
-    url: `https://yubrajkhatri.com.np/skills`,
+    url: `${PERSONAL_INFO.social.portfolio}/skills`,
     type: 'website',
     images: [
       {
